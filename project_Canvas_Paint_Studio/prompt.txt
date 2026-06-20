@@ -1,0 +1,68 @@
+Create a simple "Online Paint" web application using only HTML5, CSS3, and vanilla JavaScript (no frameworks or external libraries).
+
+Requirements:
+
+* Use the HTML5 `<canvas>` element as the main drawing area.
+* Allow freehand drawing with the mouse.
+* Include a color picker (`input type="color"`).
+* Include a brush size slider (`input type="range"`).
+* Add Eraser and Clear Canvas buttons.
+* Add a Save as PNG button.
+
+The UI should demonstrate key CSS3 features:
+Use a modern and visually appealing design.
+The purpose of this project is to demonstrate the differences between traditional HTML and HTML5 through the Canvas element, and to showcase modern CSS3 styling and layout capabilities.
+
+Generate the complete source code for this file but can not exceed 150 lines in each file:
+
+* index.html
+* style.css
+* script.js
+
+The code should be simple, short and ready to run immediately after saving the files.
+Gemini 3.5 Flash (Medium)
+
+=====================
+
+Also create a comprehensive README.md file for this project.
+
+The README should be written as a beginner-friendly tutorial and include:
+
+* Project overview and objectives.
+* Explanation of how HTML5, CSS3, and JavaScript work together in this project.
+* The role of each file:
+
+  * index.html
+  * style.css
+  * script.js
+* Detailed explanation of the HTML5 features used, especially:
+
+  * Canvas
+  * Semantic elements
+  * Color input
+  * Range input
+* Detailed explanation of the CSS3 features used, including:
+
+  * Flexbox/Grid
+  * Border Radius
+  * Box Shadow
+  * Linear Gradient
+  * Transform
+  * Transition
+  * Animation
+  * Media Queries
+* Detailed explanation of the JavaScript functionality:
+
+  * Canvas drawing
+  * Mouse events
+  * Color selection
+  * Brush size control
+  * Eraser
+  * Clear canvas
+  * Save image
+* Explain the data flow and interaction between HTML, CSS, and JavaScript.
+* Include a simple architecture diagram using Markdown.
+* Highlight the differences between traditional HTML/CSS and modern HTML5/CSS3 demonstrated in this project.
+* Provide instructions for running the project locally.
+
+Write the README as an educational document suitable for students learning HTML5, CSS3, and JavaScript for the first time.

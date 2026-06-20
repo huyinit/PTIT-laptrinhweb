@@ -1,0 +1,66 @@
+:root {
+  --bg: radial-gradient(circle at top right, #0f172a, #020617);
+  --panel-bg: rgba(30, 41, 59, 0.75);
+  --border: 1px solid rgba(255, 255, 255, 0.08);
+  --accent: #6366f1;
+  --text: #f8fafc;
+  --text-sec: #94a3b8;
+  --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  --trans: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg); color: var(--text); font-family: 'Outfit', sans-serif;
+  min-height: 100vh; display: flex; justify-content: center; align-items: center; overflow: hidden;
+}
+.app-container { width: 95vw; max-width: 1200px; height: 90vh; display: flex; flex-direction: column; gap: 1.5rem; }
+header { text-align: center; }
+header h1 {
+  font-size: 2.2rem; font-weight: 600;
+  background: linear-gradient(135deg, #a5b4fc, #6366f1);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.25rem;
+}
+header p { color: var(--text-sec); font-size: 0.95rem; }
+.workspace { flex: 1; display: grid; grid-template-columns: 280px 1fr; gap: 1.5rem; min-height: 0; }
+.toolbar {
+  background: var(--panel-bg); backdrop-filter: blur(16px); border: var(--border);
+  border-radius: 16px; padding: 1.5rem; display: flex; flex-direction: column; gap: 1.25rem; box-shadow: var(--shadow);
+}
+.tool-group { display: flex; flex-direction: column; gap: 0.5rem; }
+.tool-group label { font-size: 0.85rem; color: var(--text-sec); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+.color-picker-wrapper {
+  position: relative; width: 100%; height: 44px; border-radius: 8px; overflow: hidden;
+  border: var(--border); cursor: pointer; transition: var(--trans);
+}
+.color-picker-wrapper:hover { border-color: var(--accent); transform: scale(1.01); }
+input[type="color"] {
+  position: absolute; top: -8px; left: -8px; width: calc(100% + 16px); height: calc(100% + 16px);
+  border: none; cursor: pointer; background: none;
+}
+input[type="range"] { -webkit-appearance: none; width: 100%; height: 6px; border-radius: 3px; background: rgba(255, 255, 255, 0.1); outline: none; margin: 10px 0; }
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 18px; height: 18px; border-radius: 50%;
+  background: var(--accent); cursor: pointer; transition: var(--trans); box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+}
+input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.2); background: var(--text); }
+.tool-divider { height: 1px; background: rgba(255, 255, 255, 0.08); }
+.tool-buttons, .action-buttons { display: flex; gap: 0.75rem; }
+.tool-buttons { flex-direction: column; }
+button {
+  display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.75rem 1rem;
+  border-radius: 8px; border: var(--border); font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 0.9rem;
+  cursor: pointer; transition: var(--trans); color: var(--text-sec); background: rgba(255, 255, 255, 0.03); flex: 1;
+}
+button:hover { color: var(--text); background: rgba(255, 255, 255, 0.08); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); }
+button.active { background: var(--accent); border-color: var(--accent); color: var(--text); box-shadow: 0 0 15px rgba(99, 102, 241, 0.4); }
+button.active:hover { background: #4f46e5; }
+.danger-btn:hover { background: #ef4444 !important; border-color: #ef4444 !important; color: #fff !important; box-shadow: 0 0 15px rgba(239, 68, 68, 0.4); }
+.success-btn:hover { background: #10b981 !important; border-color: #10b981 !important; color: #fff !important; box-shadow: 0 0 15px rgba(16, 185, 129, 0.4); }
+.canvas-container { position: relative; background: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); border: var(--border); }
+canvas { display: block; width: 100%; height: 100%; cursor: crosshair; }
+@media (max-width: 768px) {
+  body { overflow: auto; padding: 1rem 0; }
+  .app-container { height: auto; width: 92vw; }
+  .workspace { grid-template-columns: 1fr; }
+  .canvas-container { height: 450px; }
+}

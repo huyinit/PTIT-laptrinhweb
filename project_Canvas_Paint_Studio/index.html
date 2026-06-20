@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas Paint Studio - HTML5 & CSS3 Showcase</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>Canvas Paint Studio</h1>
+      <p>A demonstration of HTML5 Canvas and modern CSS3 aesthetics</p>
+    </header>
+
+    <main class="workspace">
+      <!-- Toolbar Panel -->
+      <aside class="toolbar" id="toolbar">
+        <div class="tool-group">
+          <label for="colorPicker">Brush Color</label>
+          <div class="color-picker-wrapper">
+            <input type="color" id="colorPicker" value="#6366f1">
+          </div>
+        </div>
+
+        <div class="tool-group">
+          <label for="brushSize">Size: <span id="sizeValue">8</span>px</label>
+          <input type="range" id="brushSize" min="1" max="50" value="8">
+        </div>
+
+        <div class="tool-divider"></div>
+
+        <div class="tool-buttons">
+          <button id="btnBrush" class="tool-btn active" title="Brush Tool">
+            <svg viewBox="0 0 24 24" width="20" height="20">
+              <path fill="currentColor" d="M20.71 5.63l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-3.12 3.12-1.93-1.91-1.41 1.41 1.42 1.42L3 16.25V21h4.75l8.92-8.92 1.42 1.42 1.41-1.41-1.92-1.92 3.13-3.12c.4-.4.4-1.03 0-1.42zM6.92 19L5 17.08l8.06-8.06 1.92 1.92L6.92 19z"/>
+            </svg>
+            <span>Brush</span>
+          </button>
+          <button id="btnEraser" class="tool-btn" title="Eraser Tool">
+            <svg viewBox="0 0 24 24" width="20" height="20">
+              <path fill="currentColor" d="M16.24 3.56l4.95 4.94c.78.79.78 2.05 0 2.83L14.12 18H21v2h-9c-.55 0-1-.45-1-1v-.09L3.56 11.4c-.78-.78-.78-2.05 0-2.83L8.5 3.62c.79-.78 2.05-.78 2.83 0l4.91 4.91 4.93-4.97zM11.27 9.8L8.44 6.97c-.39-.39-1.02-.39-1.41 0L5.66 8.34 11.3 14l2.12-2.12-2.15-2.08z"/>
+            </svg>
+            <span>Eraser</span>
+          </button>
+        </div>
+
+        <div class="tool-divider"></div>
+
+        <div class="action-buttons">
+          <button id="btnClear" class="action-btn danger-btn" title="Clear Canvas">
+            <svg viewBox="0 0 24 24" width="18" height="18">
+              <path fill="currentColor" d="M15 16h4v2h-4zm0-8h7v2h-7zm0 4h6v2h-6zM3 18c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V8H3v10zm2-8h6v8H5v-8zm8.5-6l-1-1h-5l-1 1H2v2h15V4z"/>
+            </svg>
+            <span>Clear</span>
+          </button>
+          <button id="btnSave" class="action-btn success-btn" title="Save Drawing as PNG">
+            <svg viewBox="0 0 24 24" width="18" height="18">
+              <path fill="currentColor" d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/>
+            </svg>
+            <span>Save PNG</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- Drawing Canvas Area -->
+      <section class="canvas-container">
+        <canvas id="paintCanvas"></canvas>
+      </section>
+    </main>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
