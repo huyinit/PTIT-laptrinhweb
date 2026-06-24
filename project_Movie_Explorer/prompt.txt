@@ -1,0 +1,57 @@
+# Prompt xây dựng ứng dụng Movie Explorer (phiên bản ngắn gọn)
+
+Hãy xây dựng một ứng dụng Web tên **Movie Explorer** bằng **HTML, CSS và Vanilla JavaScript** dành cho sinh viên môn Lập trình Web.
+
+## Mục tiêu
+
+Xây dựng một ứng dụng đơn giản cho phép người dùng tìm kiếm và khám phá phim thông qua API.
+
+## Chức năng yêu cầu
+
+1. Tìm kiếm phim theo tên.
+2. Hiển thị danh sách phim (poster, tên phim, năm phát hành).
+3. Cho phép lọc theo năm phát hành hoặc loại phim.
+4. Hỗ trợ phân trang (Previous/Next).
+5. Hiển thị thông báo khi không tìm thấy dữ liệu.
+
+## Yêu cầu kỹ thuật
+
+Bắt buộc sử dụng:
+
+* ES6+ (`let`, `const`, destructuring, spread/rest, template literals)
+* Arrow functions
+* `map()`, `filter()`, `reduce()`
+* `Promise`, `async/await`
+* `import/export`
+* `try/catch`
+
+## Giới hạn mã nguồn
+
+Đây là **bài demo trên lớp**, vì vậy mã nguồn phải **đơn giản, dễ hiểu và ngắn gọn**.
+
+Các ràng buộc:
+
+* Chỉ sử dụng HTML, CSS và Vanilla JavaScript.
+* Không sử dụng React, Vue, Angular hoặc thư viện ngoài.
+* Tổng số dòng code JavaScript không vượt quá **100 dòng** (không tính khoảng trắng và chú thích).
+* HTML không quá 40 dòng.
+* CSS không quá 60 dòng.
+* Chia thành các module nhỏ và sử dụng `import/export`.
+* Ưu tiên tính dễ đọc và dễ giải thích.
+
+## Cấu trúc thư mục
+
+```text
+index.html
+css/style.css
+js/main.js
+js/api.js
+js/ui.js
+```
+
+## Yêu cầu đầu ra
+
+1. Sinh đầy đủ mã nguồn cho từng tệp.
+2. Chú thích ngắn gọn các đoạn mã quan trọng.
+3. Ưu tiên sự đơn giản để có thể demo trong vòng 10–15 phút trên lớp.
+4. Viết file README.md để hỗ trợ giới thiệu về dự án cũng như cách chạy chương trình.

@@ -1,0 +1,29 @@
+/* Reset and layout */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, sans-serif; }
+body { background: linear-gradient(135deg, #0d0a1b, #181130); color: #fff; min-height: 100vh; padding: 2rem; display: flex; justify-content: center; }
+.app { width: 100%; max-width: 900px; text-align: center; }
+h1 { margin-bottom: 1.5rem; background: linear-gradient(90deg, #ff8a00, #da1b60); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+/* Form glassmorphism container and custom controls */
+form { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem; background: rgba(255, 255, 255, 0.05); padding: 1rem; border-radius: 12px; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+input, select, button { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.15); color: #fff; padding: 0.75rem; border-radius: 8px; flex: 1 1 150px; outline: none; transition: 0.3s; }
+input::placeholder { color: #aaa; }
+input:focus, select:focus { border-color: #da1b60; box-shadow: 0 0 10px rgba(218, 27, 96, 0.3); }
+
+/* Buttons with linear-gradients & interactive micro-animations */
+button { background: linear-gradient(90deg, #ff8a00, #da1b60); font-weight: bold; cursor: pointer; border: none; }
+button:hover:not(:disabled) { transform: translateY(-2px); opacity: 0.9; }
+button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* Responsive movie cards grid layout */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+.card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 0.75rem; transition: 0.3s; display: flex; flex-direction: column; }
+.card:hover { transform: translateY(-5px); border-color: rgba(218, 27, 96, 0.5); box-shadow: 0 8px 20px rgba(0,0,0,0.4); }
+.card img { width: 100%; height: 240px; object-fit: cover; border-radius: 8px; margin-bottom: 0.75rem; background: #222; }
+.card h3 { font-size: 1rem; margin-bottom: 0.5rem; height: 2.5rem; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.card p { font-size: 0.85rem; color: #ccc; margin-top: auto; }
+
+/* Pagination and Info/Loading text */
+.pagination { display: flex; gap: 1rem; justify-content: center; align-items: center; margin-top: 1rem; }
+.pagination button { flex: 0 0 80px; }
+.info { grid-column: 1 / -1; padding: 3rem 0; color: #888; font-size: 1.2rem; }
